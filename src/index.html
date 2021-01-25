@@ -1,12 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="description" content="Школа английского языка для детей от 2 до 7 лет">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Школа английского языка CleverBaby</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
+
 <body>
-  <h1>Пупа-залупа</h1>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__wrapper">
+        <a class="logo header__logo" href="#" aria-label="Логотип школы Английского языка CleverBaby">
+          <!--Здесь будет свг изображение логотипа-->
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item ">
+              <a href="index.html">Методика</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="index.html">Преподаватели</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="index.html">Группы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="index.html">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="index.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__tel">
+          <!-- Здесь будет свг изображение трубки -->
+          <a class="header__link header__link--tel" href="tel:+74959834719">+7 (495) 983-47-19</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="content__wrapper">
+        <div class="container">
+          <h1 class="content__title">Английский язык</h1>
+          <span class="content__mark">для детей от 2 до 7 лет</span>
+          <p class="content__lead">Гармоничное развитие детей и обучение
+            через полное погружение в языковую среду</p>
+          <a href="#" class="content__btn sign">Записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section study">
+      <div class="study__wrapper">
+        <div class="container">
+          <h2 class="section__title study__title">Как проходит обучение</h2>
+          <div class="study__video">
+            <p class="study__lead">Посмотрите, как проходят наши занятия</p>
+            <!-- Здесь будет видео -->
+          </div>
+          <div class="study__info">
+            <p class="study__lead">Играя - обучаем, обучая - развиваем</p>
+            <p class="study__paragraph">Мы взяли все самое лучшее из традиционных и современных методик обучения и развития детей.
+              Обучение английскому языку происходит легко и интересно, ведь малыши не зубрят материал по учебникам, а познают его через игру, сказки, книги и музыку.
+            </p>
+            <p class="study__paragraph">Наша методика также включает в себя обучение по программе Cambridge.
+              Благодаря этому, наши ученики без труда сдают международные и государственные экзамены.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="features__wrapper">
+        <div class="features__container container">
+          <div class="features__image">
+            <!-- здесь будет картинка -->
+            <ul class="features__list">
+              <li class="features__item features__item--talking">
+                <h3 class="features__item-title">Развитие 10 видов интеллекта</h3>
+                <p class="features__item-lead">Учимся общаться, развивать эмоциональный, творческий интеллект и многое другое</p>
+              </li>
+              <li class="features__item features__item--teachers">
+                <h3 class="features__item-title">Педагоги — носители языка</h3>
+                <p class="features__item-lead">Занятия ведут преподаватели из США, Великобритании и Канады, для которых английский язык является родным</p>
+              </li>
+              <li class="features__item features__item--native">
+                <p class="features__item-title">Языковое погружение</p>
+                <p class="features__item-lead">Занятия проходят полностью на английском языке, независимо от типа задания</p>
+              </li>
+              <li class="features__item features__item--groups">
+                <h3 class="features__item-title">Небольшие группы</h3>
+                <p class="features__item-lead">Дети занимаются в группах до 5 человек, что позволяет применять индивидуальный подход к каждому</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section groups">
+      <div class="groups__wrapper">
+        <div class="container">
+          <div class="groups__info-wrapper">
+            <h2 class="section__title groups__title">Наши группы</h2>
+            <p class="section__lead groups__lead">В группах занимается до 5 человек. Все дети в группе примерно одного возраста и уровня знаний.</p>
+          </div>
+          <div class="groups__list">
+            <div class="groups__item card card__blue">
+              <h3 class="card__title">Бэбики-1</h3>
+              <p class="card__lead">1 раз в неделю</p>
+              <p class="card__lead">1,5 часа занятие</p>
+              <p class="card__lead">2500 рублей в месяц</p>
+              <a href="#" class="card__btn sign">Записаться</a>
+            </div>
+            <div class="groups__item card card__orange">
+              <h3 class="card__title">Бэбики-2</h3>
+              <p class="card__lead">2 раза в неделю</p>
+              <p class="card__lead">1,5 часа занятие</p>
+              <p class="card__lead">4000 рублей в месяц</p>
+              <a href="#" class="card__btn sign">Записаться</a>
+            </div>
+            <div class="groups__item card card__pink">
+              <h3 class="card__title">Бэбики-3</h3>
+              <p class="card__lead">3 раза в неделю</p>
+              <p class="card__lead">1 час занятие</p>
+              <p class="card__lead">4000 рублей в месяц</p>
+              <a href="#" class="card__btn sign">Записаться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teachers">
+      <div class="teachers__wrapper">
+        <div class="container">
+          <div class="teachers__info-wrapper">
+            <h2 class="section__title teachers__title">Наши преподаватели</h2>
+            <p class="section__lead teachers__lead">Все наши преподаватели — носители английского языка и имеют необходимое образование и опыт работы с детьми</p>
+          </div>
+          <div class="teachers__slider slider slider__container">
+            <div class="teachers__list slider__wrapper">
+              <div class="teachers__item slider__slide">
+                <!-- здесь будет фото -->
+                <p class="teachers__name">Kate Smith</p>
+                <p class="teachers__country">США</p>
+              </div>
+              <div class="teachers__item slider__slide">
+                <!-- здесь будет фото -->
+                <p class="teachers__name">Samuel King</p>
+                <p class="teachers__country">США</p>
+              </div>
+              <div class="teachers__item slider__slide">
+                <!-- здесь будет фото -->
+                <p class="teachers__name">Nikole Young</p>
+                <p class="teachers__country">Канада</p>
+              </div>
+              <div class="teachers__item slider__slide">
+                <!-- здесь будет фото -->
+                <p class="teachers__name">Karoline Bush</p>
+                <p class="teachers__country">Канада</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="slider__button slider__button--prev">
+          <span class="visually-hidden">Предыдущий учитель</span>
+        </button>
+        <button type="button" class="slider__button slider__button--next">
+          <span class="visually-hidden">Следующий учитель</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section try">
+      <div class="try__wrapper">
+        <div class="container">
+          <h2 class="section__title try__title">Запишись на бесплатное пробное занятие</h2>
+          <p class="section__lead try__lead">Приходите к нам в гости и мы познакомим вас с педагогами, расскажем о школе и ответим на все ваши вопросы</p>
+          <a href="#" class="try__btn sign">Записаться</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__contact contact">
+      <div class="contact__wrapper">
+        <div class="container contact__container">
+          <h2 class="contact__title">Мы ждем вас</h2>
+          <dl class="contact__list">
+            <div class="contact__item">
+              <dt class="contact__info-title">Приходите к нам:</dt>
+              <dd class="contact__info">Санкт-Петербург,<br> ул.Большая Конюшенная, 19</dd>
+            </div>
+            <div class="contact__item">
+              <dt class="contact__info-title">Позвоните нам:</dt>
+              <dd class="contact__info"><a class="contact__data" href="tel:+74959834719">+7 (495) 983-47-19</a></dd>
+            </div>
+            <div class="contact__item">
+              <dt class="contact__info-title">Режим работы:</dt>
+              <dd class="contact__info">Пн-Сб, с 9-00 до 22-00</dd>
+            </div>
+            <div class="contact__item">
+              <dt class="contact__info-title">Напишите нам:</dt>
+              <dd class="contact__info"><a class="contact__data" href="mailto:info@cleverbaby.ru">info@cleverbaby.ru</a></dd>
+            </div>
+            <div class="contact__item">
+              <dt class="contact__info-title">Мы в соцсетях:</dt>
+              <dd class="contact__info">
+                <ul class="contact__social social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <span class="visually-hidden">Фейсбук</span>
+                      <!-- здесь будет свг иконка -->
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <span class="visually-hidden">ВКонтакте</span>
+                      <!-- здесь будет свг иконка -->
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <span class="visually-hidden">Инстаграмм</span>
+                      <!-- здесь будет свг иконка -->
+                    </a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div id="map" class="footer__map map">
+      <!-- здесь будет iframe карты -->
+    </div>
+
+    <div class="footer_copyright copyright">
+      <div class="copyright__wrapper">
+        <p class="copyright__text">CleverBaby &copy; 2020 Все права защищены</p>
+        <p class="copyright__text">Политика конфиденциальности</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
