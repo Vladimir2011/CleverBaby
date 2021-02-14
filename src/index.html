@@ -38,7 +38,7 @@
         </div>
         <div class="header__main-nav-wrapper">
           <nav class="main-nav">
-            <ul class="main-nav__list main-nav__list--open">
+            <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="#method" class="main-nav__link">Методика</a>
               </li>
@@ -80,7 +80,7 @@
   </header>
 
   <main>
-    <section class="content content--margin">
+    <section class="content">
       <div class="content__wrapper">
         <div class="container content__container">
           <h1 class="content__title">Английский язык</h1>
@@ -120,9 +120,9 @@
         <div class="features__container container">
           <div class="features__image-wrapper">
             <picture>
-              <source media="(max-width: 767px)" srcset="./src/images/teach-photo-mobile.png">
-              <source media="(max-width: 1023px)" srcset="./src/images/teach-photo-tablet.png">
-              <img class="features__image" src="./src/images/teach-photo.png" alt="Фото девочки">
+              <source media="(max-width: 767px)" srcset="<%=require('./images/teach-photo-mobile@1x.jpg').default%> 1x, <%=require('./images/teach-photo-mobile@2x.jpg').default%> 2x">
+              <source media="(max-width: 1023px)" srcset="<%=require('./images/teach-photo-tablet@1x.jpg').default%> 1x, <%=require('./images/teach-photo-tablet@2x.jpg').default%> 2x">
+              <img class="features__image" src="<%=require('./images/teach-photo@1x.jpg').default%>" srcset="<%=require('./images/teach-photo@2x.jpg').default%> 2x" alt="Фото девочки">
             </picture>
             <ul class="features__list">
               <li class="features__item features__item--talking">
@@ -191,22 +191,38 @@
           <div class="teachers__slider slider slider__container">
             <div class="teachers__list slider__wrapper">
               <div class="teachers__item slider__slide">
-                <img src="./src/images/KateSmith.png" alt="Учитель" width="220" height="219">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="<%=require('./images/KateSmith-mobile@1x.jpg').default%> 1x, <%=require('./images/KateSmith-mobile@2x.jpg').default%> 2x">
+                  <source media="(max-width: 1023px)" srcset="<%=require('./images/KateSmith-tablet@1x.jpg').default%> 1x, <%=require('./images/KateSmith-tablet@2x.jpg').default%> 2x">
+                  <img class="features__image" src="<%=require('./images/KateSmith@1x.jpg').default%>" srcset="<%=require('./images/KateSmith@2x.jpg').default%> 2x" alt="Фото девочки">
+                </picture>
                 <p class="teachers__name">Kate Smith</p>
                 <p class="teachers__country">США</p>
               </div>
               <div class="teachers__item slider__slide">
-                <img src="./src/images/SamuelKing.png" alt="Учитель" width="220" height="219">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="<%=require('./images/SamuelKing-mobile@1x.jpg').default%> 1x, <%=require('./images/SamuelKing-mobile@2x.jpg').default%> 2x">
+                  <source media="(max-width: 1023px)" srcset="<%=require('./images/SamuelKing-tablet@1x.jpg').default%> 1x, <%=require('./images/SamuelKing-tablet@2x.jpg').default%> 2x">
+                  <img class="features__image" src="<%=require('./images/SamuelKing@1x.jpg').default%>" srcset="<%=require('./images/SamuelKing@2x.jpg').default%> 2x" alt="Фото девочки">
+                </picture>
                 <p class="teachers__name">Samuel King</p>
                 <p class="teachers__country">США</p>
               </div>
               <div class="teachers__item slider__slide">
-                <img src="./src/images/NikoleYoung.png" alt="Учитель" width="220" height="219">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="<%=require('./images/NikoleYoung-mobile@1x.jpg').default%> 1x, <%=require('./images/NikoleYoung-mobile@2x.jpg').default%> 2x">
+                  <source media="(max-width: 1023px)" srcset="<%=require('./images/NikoleYoung-tablet@1x.jpg').default%> 1x, <%=require('./images/NikoleYoung-tablet@2x.jpg').default%> 2x">
+                  <img class="features__image" src="<%=require('./images/NikoleYoung@1x.jpg').default%>" srcset="<%=require('./images/NikoleYoung@2x.jpg').default%> 2x" alt="Фото девочки">
+                </picture>
                 <p class="teachers__name">Nikole Young</p>
                 <p class="teachers__country">Канада</p>
               </div>
               <div class="teachers__item slider__slide">
-                <img src="./src/images/KarolineBush.png" alt="Учитель" width="220" height="219">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="<%=require('./images/KarolineBush-mobile@1x.jpg').default%> 1x, <%=require('./images/KarolineBush-mobile@2x.jpg').default%> 2x">
+                  <source media="(max-width: 1023px)" srcset="<%=require('./images/KarolineBush-tablet@1x.jpg').default%> 1x, <%=require('./images/KarolineBush-tablet@2x.jpg').default%> 2x">
+                  <img class="features__image" src="<%=require('./images/KarolineBush@1x.jpg').default%>" srcset="<%=require('./images/KarolineBush@2x.jpg').default%> 2x" alt="Фото девочки">
+                </picture>
                 <p class="teachers__name">Karoline Bush</p>
                 <p class="teachers__country">Канада</p>
               </div>
@@ -335,7 +351,7 @@
     </div>
 
     <div id="map" class="footer__map map">
-      <img class="map__address" src="./src/images/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1366" height="611">
+      <img class="map__address" src="<%=require('./images/map.png').default%>" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1366" height="611">
       <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611933829089!5m2!1sru!2sru" width="1366" height="611" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 
@@ -350,22 +366,28 @@
 
     <section class="popup popup__sign">
       <h2 class="popup__title">Мы вам перезвоним</h2>
-      <form class="form" method="post">
+      <form class="form form__sign popup__form" method="post">
         <div class="form__wrapper">
-          <label class="field form__field form__field--name">
-            <span class="field__name">Имя:</span>
-            <input class="field__input" type="text" placeholder="Укажите имя" name="firstname" required>
-          </label>
-          <label class="field form__field form__field--phone">
-            <span class="field__name">Номер телефона:</span>
-            <input class="field__input" type="tel" placeholder="Номер, пожалуйста" name="phone" required>
-          </label>
-          <label class="field form__field form__field--email">
-            <span class="field__name">Email:</span>
-            <input class="field__input" type="email" placeholder="Введите почту" name="email" required>
-          </label>
+          <div class="field form__field form__field--name">
+            <label class="field__name" for="name">Имя:</label>
+            <input class="field__input" id ="name" type="text" placeholder="Укажите имя" name="name" min="2" max="32" required>
+            <p class="field__err-msg popup__err-msg_tel-tel"></p>
+          </div>
+          <p class="field__err-msg popup__err-msg_user-user"></p>
+          <div class="field form__field form__field--phone">
+            <label class="field__name" for="phone">Номер телефона:</label>
+            <input class="field__input" id="phone" type="tel" placeholder="Номер, пожалуйста" name="phone" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" required>
+            <p class="field__err-msg popup__err-msg_tel-tel"></p>
+          </div>
+          <p class="field__err-msg popup__err-msg_tel-tel"></p>
+          <div class="field form__field form__field--email">
+            <label class="field__name" for="email">Email:</label>
+            <input class="field__input" id="email" type="email" placeholder="Введите почту" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <p class="field__err-msg popup__err-msg_tel-tel"></p>
+          </div>
+
         </div>
-        <button type="submit" class="popup__button sign" disabled>Отправить</button>
+        <button type="submit" class="popup__button sign popup__button--sign" disabled>Отправить</button>
         <button class="popup__close" type="button">Закрыть</button>
       </form>
     </section>
@@ -376,7 +398,10 @@
     </section>
 
   </footer>
-
+  <button class="up-button" type="button">
+    ↑
+    <span class="visually-hidden">Наверх</span>
+  </button>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
