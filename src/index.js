@@ -1,4 +1,8 @@
 import './style.css';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
+window.__forceSmoothScrollPolyfill__ = true;
 
 const mainNav = document.querySelector('.main-nav__list');
 const mainNavItems = document.querySelectorAll('.main-nav__item')
@@ -17,6 +21,33 @@ const ERROR_MESSAGES = {
   tooLong: 'Должно быть от 2 до 30 символов',
   typeMismatch: 'Введите правильный тип данных'
 }
+
+// Адаптируем слайдер под ширину планшета / смартфона
+
+const adaptiveSlide = () => {
+  let slidesToShow = 4;
+  if (screen.width <= 1023 && screen.width >= 768) {
+    return slidesToShow = 3;
+  } else if (screen.width <= 767) {
+    return slidesToShow = 1;
+  } else {
+    return slidesToShow;
+  }
+};
+
+// Переменные слайдер
+
+let position = 0;
+const slidesToScroll = 1;
+const sliderContainer = document.querySelector('.slider__container');
+const sliderTrack = sliderContainer.querySelector('.slider__wrapper');
+const btnNext = sliderContainer.querySelector('.slider__button--next');
+const btnPrev = sliderContainer.querySelector('.slider__button--prev');
+const slides = sliderContainer.querySelectorAll('.slider__slide');
+const slidesCount = slides.length;
+const slideWidth = sliderContainer.clientWidth / adaptiveSlide();
+const movePosition = slidesToScroll * slideWidth;
+
 
 // Открытие меню
 
@@ -64,7 +95,8 @@ popupThanks.addEventListener('click', closeModal);
 // Открытие попапа при нажатии на кнопки "Записаться"
 
 for (let button of signButtons) {
-  button.onclick = function () {
+  button.onclick = function (e) {
+    e.preventDefault();
     openSignEdit();
   }
 }
@@ -139,3 +171,57 @@ let signInfo = (event) => {
 }
 
 buttonSign.addEventListener('click', signInfo);
+
+
+// Слайдер
+
+// Задаем мин ширину элементам слайдера
+
+slides.forEach((slide) => {
+  slide.style.minWidth = `${slideWidth}px`;
+});
+
+
+btnNext.addEventListener('click', () => {
+  const itemsLeft = slidesCount - (Math.abs(position) + adaptiveSlide() * slideWidth) / slideWidth;
+
+  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * slideWidth;
+
+  setPosition();
+  checkBtns();
+});
+
+btnPrev.addEventListener('click', () => {
+  const itemsLeft = Math.abs(position) / slideWidth;
+
+  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * slideWidth;
+
+  setPosition();
+  checkBtns();
+});
+
+const setPosition = () => {
+  sliderTrack.style.transform = `translateX(${position}px)`;
+};
+
+const checkBtns = () => {
+  btnPrev.disabled = position === 0;
+  btnNext.disabled = position <= -(slidesCount - adaptiveSlide()) * slideWidth;
+};
+
+checkBtns();
+
+const links = document.querySelectorAll(".main-nav__link");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+
+  document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+  });
+}
